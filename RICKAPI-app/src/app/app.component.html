@@ -1,0 +1,29 @@
+<main class="rick-container">
+  <header class="header">
+    <h1 class="title">Rick and Morty <span class="highlight">Episodes</span></h1>
+  </header>
+
+  <ng-container *ngIf="episodesData() as data; else loadingTemplate">
+    <div class="grid-container">
+      
+      <article *ngFor="let ep of data.results" class="episode-card">
+        <div class="card-content">
+          <span class="episode-code">{{ ep.episode }}</span>
+          <h2 class="episode-name">{{ ep.name }}</h2>
+          <div class="date-container">
+            <span class="status-icon"></span>
+            <p class="air-date">Emitido: {{ ep.air_date }}</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </ng-container>
+
+  <ng-template #loadingTemplate>
+    <div class="loader">
+      <div class="portal-spinner"></div>
+      <p>Abriendo portal interdimensional...</p>
+    </div>
+  </ng-template>
+</main>
