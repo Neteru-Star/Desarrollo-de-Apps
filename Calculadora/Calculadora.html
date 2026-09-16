@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculadora">
+        <h2 style="text-align: center; margin-top: 0;">Calculadora Pro max</h2>
+        
+        <input type="number" id="numero1" placeholder="Ingrese el primer número">
+        
+        <select id="operacion">
+            <option value="+">Suma (+)</option>
+            <option value="-">Resta (-)</option>
+            <option value="*">Multiplicación (*)</option>
+            <option value="/">División (/)</option>
+        </select>
+        
+        <input type="number" id="numero2" placeholder="Ingrese el segundo número">
+        
+        <button onclick="calcular()">Resultado</button>
+        
+        <h3 id="texto-resultado">El resultado es: </h3>
+    </div>
+
+    <div class="historial">
+        <h3 style="margin-top: 0;">Resultados anteriores</h3>
+        <ul id="lista-historial">
+        </ul>
+    </div>
+
+    <script>
+        function calcular() {
+            const num1 = parseFloat(document.getElementById('numero1').value);
+            const num2 = parseFloat(document.getElementById('numero2').value);
+            const operacion = document.getElementById('operacion').value;
+            const textoResultado = document.getElementById('texto-resultado');
+            const listaHistorial = document.getElementById('lista-historial');
+
+            if (isNaN(num1) || isNaN(num2)) {
+                textoResultado.innerText = "Error: Ingrese ambos números.";
+                return;
+            }
+
+            let resultadoFinal = 0;
+
+            switch (operacion) {
+                case '+':
+                    resultadoFinal = num1 + num2;
+                    break;
+                case '-':
+                    resultadoFinal = num1 - num2;
+                    break;
+                case '*':
+                    resultadoFinal = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        textoResultado.innerText = "Error: No se puede dividir por cero.";
+                        return;
+                    }
+                    resultadoFinal = num1 / num2;
+                    break;
+            }
+
+            textoResultado.innerText = "El resultado es: " + resultadoFinal;
+
+            const nuevoItem = document.createElement('li');
+            nuevoItem.innerText = `${num1} ${operacion} ${num2} = ${resultadoFinal}`;
+            
+            listaHistorial.appendChild(nuevoItem);
+        }
+    </script>
+
+</body>
+</html>

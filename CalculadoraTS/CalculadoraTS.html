@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora TypeScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculadora">
+        <h2 style="text-align: center; margin-top: 0;">Calculadora Pro Max (TS)</h2>
+        
+        <input type="number" id="numero1" placeholder="Ingrese el primer número">
+        
+        <select id="operacion">
+            <option value="+">Suma (+)</option>
+            <option value="-">Resta (-)</option>
+            <option value="*">Multiplicación (*)</option>
+            <option value="/">División (/)</option>
+        </select>
+        
+        <input type="number" id="numero2" placeholder="Ingrese el segundo número">
+        
+        <!-- Le agregamos un ID al botón -->
+        <button id="btn-calcular">Resultado</button>
+        
+        <h3 id="texto-resultado">El resultado es: </h3>
+    </div>
+
+    <div class="historial">
+        <h3 style="margin-top: 0;">Resultados anteriores</h3>
+        <ul id="lista-historial">
+        </ul>
+    </div>
+
+    <!-- Aquí llamamos al archivo JS que generará TypeScript -->
+    <script src="app.js" defer></script>
+
+</body>
+</html>
