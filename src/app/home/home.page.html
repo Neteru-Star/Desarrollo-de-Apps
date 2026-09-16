@@ -1,20 +1,91 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header collapse="condense" class="ion-no-border">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Ionic Framework</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-icon slot="start" name="moon" class="dark-mode-icon"></ion-icon>
+      <ion-toggle justify="space-between" [checked]="isDarkMode" (ionChange)="toggleDarkMode($event)">
+        Dark Mode
+      </ion-toggle>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/accordion">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Accordion</ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/action-sheet">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Action Sheet</ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/alert">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Alert</ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/avatar">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Avatar</ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/badge">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Badge</ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/breadcrumbs">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Breadcrumbs</ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/button">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Button</ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/card">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Card</ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/checkbox">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Checkbox</ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" routerLink="/chip">
+      <div slot="start" class="component-icon">
+        <ion-icon name="shapes-outline"></ion-icon>
+      </div>
+      <ion-label>Chip</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Chip</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <p>Chips represent complex entities in small blocks, such as a contact. They can contain a photo, short title string, and brief information.</p>
+  
+  <ion-chip>Default</ion-chip>
+  <ion-chip disabled="true">Disabled</ion-chip>
+  <ion-chip outline="true">Outline</ion-chip>
+</ion-content>

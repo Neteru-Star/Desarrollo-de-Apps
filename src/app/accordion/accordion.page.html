@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Accordion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Accordion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="ion-padding">
+    <p>Accordions provide collapsible sections in your content to reduce vertical space while providing a way of organizing and grouping information. All <code>ion-accordion</code> components should be grouped inside <code>ion-accordion-group</code> components.</p>
+  </div>
+  
+  <ion-accordion-group>
+    <ion-accordion value="colors">
+      <ion-item slot="header" color="light">
+        <ion-label>Colors</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Red, Green, Blue</div>
+    </ion-accordion>
+    <ion-accordion value="shapes">
+      <ion-item slot="header" color="light">
+        <ion-label>Shapes</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Circle, Triangle, Square</div>
+    </ion-accordion>
+    <ion-accordion value="numbers">
+      <ion-item slot="header" color="light">
+        <ion-label>Numbers</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">1, 2, 3</div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
